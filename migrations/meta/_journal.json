@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1703508245559,
+      "tag": "0000_tranquil_james_howlett",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1703510799427,
+      "tag": "0001_broken_silk_fever",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1703511482910,
+      "tag": "0002_ordinary_echo",
+      "breakpoints": true
+    }
+  ]
+}
