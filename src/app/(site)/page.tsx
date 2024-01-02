@@ -147,8 +147,6 @@ function HomePage() {
                   className="w-[500px]
                   shrink-0s
                   rounded-xl
-                  dark:bg-gradient-to-t
-                  dark:from-border dark:to-background
                 "
                   cardHeader={
                     <div
@@ -165,17 +163,13 @@ function HomePage() {
                         <CardTitle className="text-foreground">
                           {testimonial.name}
                         </CardTitle>
-                        <CardDescription className="dark:text-washed-purple-800">
+                        <CardDescription>
                           {testimonial.name.toLocaleLowerCase()}
                         </CardDescription>
                       </div>
                     </div>
                   }
-                  cardContent={
-                    <p className="dark:text-washed-purple-800">
-                      {testimonial.message}
-                    </p>
-                  }
+                  cardContent={<p>{testimonial.message}</p>}
                 ></CustomCard>
               ))}
             </div>
@@ -208,7 +202,7 @@ function HomePage() {
             <CustomCard
               key={card.planType}
               className={clsx(
-                'w-[300px] rounded-2xl dark:bg-black/40 background-blur-3xl relative',
+                'w-[300px] rounded-2xl background-blur-3xl relative',
                 {
                   'border-brand-primaryPurple/70':
                     card.planType === PRICING_PLANS.proplan,
@@ -223,9 +217,8 @@ function HomePage() {
                   {card.planType === PRICING_PLANS.proplan && (
                     <>
                       <div
-                        className="hidden dark:block w-full blur-[120px] rounded-full h-32
+                        className="hidden w-full blur-[120px] rounded-full h-32
                         absolute
-                        bg-brand-primaryPurple/80
                         -z-10
                         top-0
                       "
@@ -249,16 +242,8 @@ function HomePage() {
                   >
                     ${card.price}
                   </span>
-                  {+card.price > 0 ? (
-                    <span className="dark:text-washed-purple-800 ml-1">
-                      /mo
-                    </span>
-                  ) : (
-                    ''
-                  )}
-                  <p className="dark:text-washed-purple-800">
-                    {card.description}
-                  </p>
+                  {+card.price > 0 ? <span className="ml-1">/mo</span> : ''}
+                  <p>{card.description}</p>
                   <Button
                     variant="default"
                     className="whitespace-nowrap w-full mt-4"

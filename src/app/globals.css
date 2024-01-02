@@ -26,6 +26,7 @@ body,html {
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
+    --link: 217, 83%, 50%;
     --ring: 240 5.9% 10%;
     --radius: 0.3rem;
   }
